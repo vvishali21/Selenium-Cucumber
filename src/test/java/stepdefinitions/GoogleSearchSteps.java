@@ -28,7 +28,7 @@ public class GoogleSearchSteps {
 		options.addArguments("--remote-allow-origins=*");
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Eclipse\\Selenium-Cucumber\\src\\main\\resources\\drivers\\chromedriver.exe");
+				"C:\\Eclipse\\Selenium-Cucumber2\\src\\main\\resources\\drivers\\chromedriver.exe");
 
 		driver = new ChromeDriver(options);
 

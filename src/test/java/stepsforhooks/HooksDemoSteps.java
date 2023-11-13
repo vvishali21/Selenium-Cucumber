@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -23,13 +24,13 @@ public class HooksDemoSteps {
 	public void browserSetup() {
 
 		System.out.println("  I am inside browserSetup");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--remote-allow-origins=*");
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Eclipse\\Selenium-Cucumber\\src\\main\\resources\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver",
+				"C:\\Eclipse\\Selenium-Cucumber2\\src\\main\\resources\\drivers\\geckodriver.exe");
 
-		driver = new ChromeDriver(options);
+		driver = new FirefoxDriver();
 
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
